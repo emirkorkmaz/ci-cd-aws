@@ -10,5 +10,6 @@ COPY . .
 CMD ["npm", "run", "build"]
 
 FROM nginx
+EXPOSE 80
 # /usr/share/nginx/html is default serving folder of nginx
 COPY --from=building /usr/apps/frontend/build /usr/share/nginx/html

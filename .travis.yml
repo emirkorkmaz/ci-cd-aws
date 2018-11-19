@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t jaqenhghar2402/ci-cd-aws -f Dockerfile.dev .
+  - docker build -t jaqenhghar2402/ci-cd-aws -f Dockerfile .
 
 # commands required for running test suite
 # use -- --coverage to make npm run tests and then exit immediately
