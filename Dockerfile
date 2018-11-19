@@ -4,9 +4,9 @@
 # we will serve the content over nginx
 FROM node:alpine as building
 WORKDIR /usr/apps/frontend
-COPY package.json .
+COPY package*.json ./
 RUN npm install
-COPY . .
+COPY ./ ./
 CMD ["npm", "run", "build"]
 
 FROM nginx
