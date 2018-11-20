@@ -19,6 +19,7 @@ class App extends Component {
           >
             Come on! You can learn this React!
             This change is done in message_change branch
+            Merge this PR please
           </a>
         </header>
       </div>
