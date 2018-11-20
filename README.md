@@ -10,7 +10,7 @@ Upon commit, Travis will use .travis.yml file
 Another good things....
 In case you have created a pull request, travis will recognize it and start pre-checks. Unless these checks are passed, you cant merge the PR  
 
-and...dont forget to use [skip ci] on commit messages for files to be ignore for triggering travis from build&deploy
+and...dont forget to use [ci skip] on commit messages for files to be ignore for triggering travis from build&deploy
 
 ![1](https://github.com/emirkorkmaz/cloudera-quickstart-docker-compose/blob/master/misc/images/1.png "1")  
 ![2](https://github.com/emirkorkmaz/cloudera-quickstart-docker-compose/blob/master/misc/images/2.png "2")  
