@@ -6,9 +6,24 @@ services:
   - docker
 
 before_install:
-  - docker build -t jaqenhghar2402/ci-cd-aws -f Dockerfile .
+  - docker build -t jaqenhghar2402/ci-cd-aws -f Dockerfile.dev .
 
 # commands required for running test suite
 # use -- --coverage to make npm run tests and then exit immediately
 script:
   - docker run jaqenhghar2402/ci-cd-aws npm run test -- --coverage
+
+# bucket_path is same with app name since s3 path will be created only after first deployment
+# deploy only after changes at master
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-central-1"
+  app: "ci-cd-aws"
+  env: "CiCdAws-env-1"
+  bucket_name: "elasticbeanstalk-eu-central-1-124917527601"
+  bucket_path: "ci-cd-aws"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_API_KEY"
