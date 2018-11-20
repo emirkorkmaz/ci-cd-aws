@@ -19,7 +19,7 @@ deploy:
   provider: elasticbeanstalk
   region: "eu-central-1"
   app: "ci-cd-aws"
-  env: "CiCdAws-env"
+  env: "CiCdAws-env-1"
   bucket_name: "elasticbeanstalk-eu-central-1-124917527601"
   bucket_path: "ci-cd-aws"
   on:
