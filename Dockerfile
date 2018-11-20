@@ -5,9 +5,9 @@
 FROM node:alpine as building
 WORKDIR /usr/apps/frontend
 COPY package*.json ./
-RUN npm install
+RUN yarn install --upgrade
 COPY ./ ./
-CMD ["npm", "run", "build"]
+CMD ["yarn", "build"]
 
 FROM nginx
 EXPOSE 80
