@@ -18,6 +18,7 @@ class App extends Component {
             rel="noopener noreferrer"
           >
             Come on! You can learn this React!
+            This change is done in message_change branch
           </a>
         </header>
       </div>
